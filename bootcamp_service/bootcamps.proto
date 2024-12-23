@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/dipanshuchaubey/protos-package/bootcamp_service/v1";
+
+package bootcamp_service.v1;
+
+import "bootcamp_service/request/bootcamps.proto";
+import "bootcamp_service/response/bootcamps.proto";
+
+service BootcampService {
+	rpc GetBootcampsDetails(request.GetBootcampsDetailsRequest) returns (response.GetBootcampsDetailsResponse);
+	rpc CreateBootcamp(request.CreateBootcampRequest) returns (response.CreateBootcampResponse);
+}
